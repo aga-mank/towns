@@ -31,6 +31,7 @@
 <body>
 	<h1>Miasta - Mapa Polski</h1>
 	<div id="map"></div>
+	<p> Info: Czerwone kropki oznaczają lokalizację miast Polski - siedziby władz powiatów, województw, oraz miasta na prawach powiatów.<br>Kliknij, aby sprawdzić nazwę miasta.</p>
 
 	<script>
 		var map = L.map('map').setView([52.0693, 19.480], 7); 
@@ -55,8 +56,8 @@
 		function style_pow(feature) {
 		    return {
 			fillColor: getColor(feature.properties.JPT_JOR_ID),
-			weight: 3,
-			opacity: 0.8,
+			weight: 2,
+			opacity: 0.4,
 			color: 'white',
 			fillOpacity: 0.4
 		    };
