@@ -38,6 +38,7 @@
 
 		L.tileLayer('https://api.mapbox.com/styles/v1/agalamaga/ck63hsogg0q301is05xbwajx5/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWdhbGFtYWdhIiwiYSI6ImNqcGlhOTk3NzA3OGszcW8yZHYyaTcycncifQ.lR2UdmPxBXMpM2blk9ZG1A', {
 		maxZoom: 18,
+		minZoom: 6,
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 		'Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -57,7 +58,7 @@
 		    return {
 			fillColor: getColor(feature.properties.JPT_JOR_ID),
 			weight: 2.5,
-			opacity: 0.6,
+			opacity: 0.5,
 			color: 'white',
 			fillOpacity: 0.3
 		    };
