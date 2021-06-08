@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8">
-	<title>Miasta - Mapa Polski</title>
+	<title>Polish Towns</title>
 	<!-- include leaflet css and javascript -->
 			<link rel="stylesheet" crossorigin=""
 					href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
@@ -13,27 +13,66 @@
 			
 
 	<style type="text/css">
+            
+        html, body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        
+        #info {
+            float: right;
+            width: 450px;
+            border: 0px;
+            padding: 0px;
+            margin-right: 30px;
+            height: 100%;
+        }
+        
 		#map {
-		    width: 100%;
-		    height: 840px;
+		    width: calc(100% - 500px);
+		    height: 100%;
 		}
 
 		h1 {
 		    font-family: Helvetica;
-		}   
+            padding: 4pt;
+		}  
+        
 		p {
 		    font-family: Helvetica;
-		    font-size: 11pt
+		    font-size: 12pt;
+            padding: 4pt;
 		 }
+        
+        #disclaimer {
+		    position: absolute; 
+            height: 50px; 
+            border: 0px; 
+            bottom: 0; 
+            right: 0;  
+            left:  calc(100% - 500px); 
+		 }
+        
 	</style>
 </head>
 
 <body>
-	<h1>Miasta - Mapa Polski</h1>
+    <div id="info">
+    	<h1>Polish Towns - County Seats</h1>
+        <p> The map shows the Polish counties and the towns, which are county seats or city counties. The counties are color-coded based on the  the province they belong to.
+            </p>
+        <p>Click on a dot, to see the name of county seat or city county.</p>
+        
+        <div id="disclaimer"><p>Created with love for my sister with Leaflet, OSM and Mapbox</p></div>
+        
+    </div>
 	<div id="map"></div>
-	<p> Info: Czerwone kropki oznaczają lokalizację miast Polski - siedziby władz powiatów, województw, oraz miasta na prawach powiatów.<br>Kliknij, aby sprawdzić nazwę miasta.</p>
+
 
 	<script>
+        
 		var map = L.map('map').setView([52.0693, 19.480], 7); 
 
 		L.tileLayer('https://api.mapbox.com/styles/v1/agalamaga/ck63hsogg0q301is05xbwajx5/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWdhbGFtYWdhIiwiYSI6ImNqcGlhOTk3NzA3OGszcW8yZHYyaTcycncifQ.lR2UdmPxBXMpM2blk9ZG1A', {
