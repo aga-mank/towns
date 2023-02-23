@@ -13,3 +13,6 @@ The map shows towns as dots, over administrative units colored by province.
 After clicking on a dot, a pop-up with the name of the town appears.
 
 ![image](https://user-images.githubusercontent.com/60704262/215325771-d074d76b-dc86-4227-bae4-0178fd1b29d5.png)
+
+The spatial data is stored in the geoJSON files: miasta.js, powiate.js.
+Please note, that this project was created a few years ago, based on my university knowledge and experience, hence some JavaScript might be a little bit outdated.
